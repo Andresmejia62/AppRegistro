@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.appregistros.appregistro.controller.Registroclientecontroller"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="620.0" prefWidth="860.0" style="-fx-background-color: #EAF7FF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appregistros.appregistro.controller.Registroclientecontroller">
+    <children>
+        <Label layoutX="30.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Registro de cliente" />
 
+        <VBox layoutX="35.0" layoutY="70.0" spacing="18.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="Nombres:" />
+                        <TextField fx:id="txtNombre" prefWidth="220.0" promptText="Ingrese nombres" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="Apellidos:" />
+                        <TextField fx:id="txtApellido" prefWidth="220.0" promptText="Ingrese apellidos" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="Tipo de cliente:" />
+                        <ComboBox fx:id="cmbTipoCliente" prefWidth="220.0" promptText="Seleccione tipo" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="Ciudad:" />
+                        <ComboBox fx:id="cmbCiudad" prefWidth="220.0" promptText="Seleccione ciudad" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="Fecha de nacimiento:" />
+                        <DatePicker fx:id="dpFechaNacimiento" prefWidth="220.0" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="Tipo de solicitud:" />
+                        <VBox spacing="8.0">
+                            <children>
+                                <RadioButton fx:id="rbNuevaSolicitud" text="Nueva solicitud" />
+                                <RadioButton fx:id="rbActualizacion" text="Actualización" />
+                                <RadioButton fx:id="rbReclamo" text="Reclamo" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <children>
+                        <Label prefWidth="130.0" text="Servicios de interés:" />
+                        <VBox spacing="8.0">
+                            <children>
+                                <CheckBox fx:id="chkInternet" text="Internet" />
+                                <CheckBox fx:id="chkTelefonia" text="Telefonía" />
+                                <CheckBox fx:id="chkCable" text="Cable" />
+                                <CheckBox fx:id="chkStreaming" text="Streaming" />
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <VBox alignment="CENTER" layoutX="610.0" layoutY="70.0" spacing="12.0">
+            <children>
+                <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Fotografía" />
+                <ImageView fx:id="imgFoto" fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="btnSeleccionarFoto" onAction="#seleccionarFoto" prefWidth="180.0" text="Seleccionar fotografía" />
+            </children>
+        </VBox>
+
+        <HBox layoutX="240.0" layoutY="520.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnGuardar" onAction="#guardarCliente" prefWidth="120.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Guardar" />
+                <Button fx:id="btnLimpiar" onAction="#limpiarFormulario" prefWidth="120.0" text="Limpiar" />
+                <Button fx:id="btnCancelar" onAction="#cancelar" prefWidth="120.0" text="Cancelar" />
+            </children>
+        </HBox>
+    </children>
 </AnchorPane>

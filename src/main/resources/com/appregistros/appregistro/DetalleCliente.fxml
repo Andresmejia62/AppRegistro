@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="12" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.appregistros.appregistro.controller.Detalleclientecontroller"
+      prefWidth="360.0" prefHeight="320.0" style="-fx-background-color: white;">
+    <padding>
+        <Insets top="20" bottom="20" left="25" right="25"/>
+    </padding>
+
+    <Label text="Detalle del cliente" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="8">
+        <Label text="Nombre:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="lblNombre" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Apellido:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="lblApellido" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Tipo de cliente:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="lblTipoCliente" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Ciudad:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <Label fx:id="lblCiudad" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Fecha nacimiento:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <Label fx:id="lblFechaNacimiento" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Tipo de solicitud:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <Label fx:id="lblTipoSolicitud" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Servicios de interés:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <Label fx:id="lblServicios" wrapText="true" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <Button text="Cerrar" onAction="#cerrar"/>
+</VBox>
